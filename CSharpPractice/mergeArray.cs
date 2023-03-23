@@ -16,7 +16,7 @@ namespace CSharpPractice
                 destArr[pos++] = sourceArr[i];
             }
         }
-        public static void Main(string[] args)
+        public static void Merge(string[] args)  //change main XXXXXXXXXXXXXXXXXXXXXXXXXXX
         {
             int[] arr1 = { 1, 8, 3 };
             int[] arr2 = { 4, 7, 6 };
