@@ -7,10 +7,16 @@ class Program
     static void Main(string[] args)
     {
 
-        var mySet = new SortedSet<int>() {1, 5, 7, 3 };
-        foreach (var item in mySet)
+       Stack <string> stack = new Stack<string>();
+        stack.Push("a");
+        stack.Push("b");
+        stack.Push("c");
+
+        while(stack.Count > 0)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(stack.Peek()); //the top most element in the stack
+
+            stack.Pop();
         }
 
        
