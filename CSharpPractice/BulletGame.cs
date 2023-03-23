@@ -25,7 +25,7 @@ namespace CSharpPractice
             Console.WriteLine("villain's balance : " + villainBullets);
         }
 
-        static void Bullet(string[] args)       //change to mainbefore executing
+        static void Bullet(string[] args)       //change to main before executing XXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
         {
             bool next = true;
             while (next)

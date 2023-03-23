@@ -4,7 +4,7 @@
 class Program
 {
 
-    public static void pg(string[] args)  //change to main while executing
+    public static void pg(string[] args)  //change to main while executing XXXXXXXXXXXXXXXXXXXXXXXXXXx
     {
         int[] arr = { 1, 3, 4, 3, 2, 5, 6 };
         int temp = 0;
