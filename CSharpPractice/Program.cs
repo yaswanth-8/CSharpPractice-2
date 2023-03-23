@@ -1,24 +1,18 @@
 ﻿namespace MyProject;
 
-class Sample<T>
-{
-    public Sample(T message) { 
-        Console.WriteLine(message);
-    }
-
-    
-}
 
 class Program
 {
-    static void Swap<T>(T lhs)
-    {
-        Console.WriteLine(lhs);
-    }
+    
     static void Main(string[] args)
     {
-        Sample<string> genericPractice = new Sample<string>("Yaswanth");
-        Sample<int> number = new Sample<int>(8);
-        Swap<int>(2);
+
+        var mySet = new SortedSet<int>() {1, 5, 7, 3 };
+        foreach (var item in mySet)
+        {
+            Console.WriteLine(item);
+        }
+
+       
     }
 }
