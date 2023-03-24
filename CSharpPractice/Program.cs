@@ -6,37 +6,22 @@ namespace MyProject;
 class Program
 {
 
-    public static void ll(string[] args)  
+    public static void Main(string[] args)  
     {
-       var list = new LinkedList<string>();
-       
-        list.AddLast("ab");
-        list.AddLast("bc");
-        list.AddLast("cd");
-        list.AddLast("de");
-        list.AddLast("ef");
-        list.AddLast("cd");
-        LinkedListNode<string> node = list.Find("cd");
-        LinkedListNode<string> currentNode = list.First;
-        while (currentNode != null)
+       Dictionary<int,string> map = new Dictionary<int,string>();
+        map.Add(1, "yaswanth");
+        map.Add(2, "kishore");
+        map.Add(3, "gokulakrishnan");
+
+        foreach(KeyValuePair<int,string> kvp in map)
         {
-            if (currentNode.Value == "cd")
+            if (kvp.Value == "yaswanth")
             {
-                // create new node with new value
-                LinkedListNode<string> newNode = new LinkedListNode<string>("new");
-
-                // insert new node before current node
-                list.AddBefore(currentNode, newNode);
+                map[kvp.Key] = "kavin";
             }
-
-            // move to next node
-            currentNode = currentNode.Next;
+            Console.WriteLine(kvp.Key + " " + kvp.Value);
         }
-
-        foreach(string i in list)
-        {
-            Console.WriteLine(i);
-        }
+        
     }
 
 }

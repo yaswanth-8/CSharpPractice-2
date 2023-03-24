@@ -8,7 +8,7 @@ namespace CSharpPractice
 {
     internal class LinkedList
     {
-        public static void Main(string[] args)
+        public static void ll(string[] args)
         {
             var list = new LinkedList<string>();
 
