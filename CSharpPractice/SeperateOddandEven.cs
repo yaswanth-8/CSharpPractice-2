@@ -8,7 +8,7 @@ namespace CSharpPractice
 {
     internal class SeperateOddandEven
     {
-        public static void Main(string[] args)
+        public static void sep(string[] args) // make it main before executing XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         {
             int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
             int oddCount = 0;

@@ -1,40 +1,42 @@
-﻿namespace MyProject;
+﻿using System.Collections.Generic;
+
+namespace MyProject;
 //change to main while executing(main method)
 
 class Program
 {
 
-    public static void pg(string[] args)  //change to main while executing XXXXXXXXXXXXXXXXXXXXXXXXXXx
+    public static void Main(string[] args)  
     {
-        int[] arr = { 1, 3, 4, 3, 2, 5, 6 };
-        int temp = 0;
-        int duplicate = 0;
-
-        //perforing sorting tofind duplicates
-        for (int i = 0; i < arr.Length; i++)
+       var list = new LinkedList<string>();
+       
+        list.AddLast("ab");
+        list.AddLast("bc");
+        list.AddLast("cd");
+        list.AddLast("de");
+        list.AddLast("ef");
+        list.AddLast("cd");
+        LinkedListNode<string> node = list.Find("cd");
+        LinkedListNode<string> currentNode = list.First;
+        while (currentNode != null)
         {
-            for (int j = i; j < arr.Length; j++)
+            if (currentNode.Value == "cd")
             {
-                if (arr[j] > arr[i])
-                {
-                    temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
+                // create new node with new value
+                LinkedListNode<string> newNode = new LinkedListNode<string>("new");
+
+                // insert new node before current node
+                list.AddBefore(currentNode, newNode);
             }
+
+            // move to next node
+            currentNode = currentNode.Next;
         }
 
-        //counting duplicates
-        for (int i = 0; i < arr.Length - 1; i++)
+        foreach(string i in list)
         {
-            if (arr[i] == arr[i + 1])
-            {
-                duplicate++;
-            }
+            Console.WriteLine(i);
         }
-
-        Console.WriteLine(duplicate);
-
     }
 
 }
